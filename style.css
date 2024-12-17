@@ -1,0 +1,41 @@
+#qrCodeContainer {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 9999;
+}
+
+.close-button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: #666;
+}
+
+.close-button:hover {
+    color: #000;
+}
+
+#qrArea {
+    margin-top: 10px;
+}
+
+#titleArea {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    max-width: 128px; /* 与二维码同宽 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
