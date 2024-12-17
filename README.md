@@ -1,46 +1,86 @@
-# QRCode.js
-QRCode.js is javascript library for making QRCode. QRCode.js supports Cross-browser with HTML5 Canvas and table tag in DOM.
-QRCode.js has no dependencies.
+# QRCode Generator 二维码生成插件
 
-## Basic Usages
+## 项目简介
+这是一个 Chrome 浏览器扩展插件，可以快速生成当前网页的二维码并显示在页面右下角。通过这个插件，用户可以方便地将网页分享给手机用户，实现PC端和移动端的快速切换。
+
+## 主要功能
+- 一键生成当前网页的二维码
+- 二维码显示在页面右下角，不影响正常浏览
+- 显示当前网页标题
+- 支持一键关闭二维码
+- 简洁的用户界面
+
+## 安装方法
+1. 下载本项目代码
+2. 打开 Chrome 浏览器，进入扩展程序页面（chrome://extensions/）
+3. 开启右上角的"开发者模式"
+4. 点击"加载已解压的扩展程序"
+5. 选择项目文件夹即可完成安装
+
+## 使用方法
+1. 点击浏览器工具栏中的插件图标
+2. 点击"显示二维码"按钮
+3. 二维码将显示在当前页面的右下角
+4. 使用手机扫描二维码即可在手机上打开当前网页
+5. 点击二维码框右上角的关闭按钮可以关闭二维码
+
+## 文件结构
 ```
-<div id="qrcode"></div>
-<script type="text/javascript">
-new QRCode(document.getElementById("qrcode"), "http://jindo.dev.naver.com/collie");
-</script>
+erweimacode/
+├── icons/                 # 图标文件夹
+│   ├── icon16.png
+│   ├── icon32.png
+│   ├── icon48.png
+│   └── icon128.png
+├── manifest.json         # 插件配置文件
+├── popup.html           # 弹出窗口HTML
+├── popup.js            # 弹出窗口脚本
+├── content.js         # 内容脚本
+├── qrcode.js         # 二维码生成库
+├── style.css         # 样式文件
+└── README.md         # 说明文档
 ```
 
-or with some options
+## 技术特点
+- 使用原生 JavaScript 开发，无需额外依赖
+- 采用 Chrome Extension Manifest V3 规范
+- 使用 qrcode.js 库生成二维码
+- 响应式设计，适应不同尺寸的屏幕
+- 优雅的错误处理机制
 
-```
-<div id="qrcode"></div>
-<script type="text/javascript">
-var qrcode = new QRCode(document.getElementById("qrcode"), {
-	text: "http://jindo.dev.naver.com/collie",
-	width: 128,
-	height: 128,
-	colorDark : "#000000",
-	colorLight : "#ffffff",
-	correctLevel : QRCode.CorrectLevel.H
-});
-</script>
-```
+## 功能特点
+- 实时生成：点击即可生成当前页面二维码
+- 位置固定：二维码固定在右下角，不影响页面浏览
+- 标题显示：在二维码下方显示当前网页标题
+- 一键关闭：提供便捷的关闭按钮
+- 简洁界面：清爽的设计风格，不影响用户体验
 
-and you can use some methods
+## 技术栈
+- HTML5
+- CSS3
+- JavaScript
+- Chrome Extension API
+- qrcode.js
 
-```
-qrcode.clear(); // clear the code.
-qrcode.makeCode("http://naver.com"); // make another code.
-```
+## 注意事项
+- 插件需要在支持 Chrome Extension Manifest V3 的浏览器中运行
+- 需要允许插件访问网页内容的权限
+- 部分网站可能会因为安全策略限制而无法生成二维码
 
-## Browser Compatibility
-IE6~10, Chrome, Firefox, Safari, Opera, Mobile Safari, Android, Windows Mobile, ETC.
+## 后续计划
+- [ ] 支持自定义二维码大小
+- [ ] 添加二维码样式选择
+- [ ] 支持二维码图片下载
+- [ ] 添加更多主题选项
+- [ ] 支持更多浏览器
 
-## License
+## 贡献
+欢迎提交 Issue 和 Pull Request 来帮助改进这个项目。
+
+## 许可证
 MIT License
 
-## Contact
-twitter @davidshimjs
+---
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/davidshimjs/qrcodejs/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+如果你觉得这个插件有用，欢迎给项目点个星标 ⭐️
 
